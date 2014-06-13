@@ -1,10 +1,12 @@
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Demo {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		Extractor cex = new CEX_Extractor();
-		Extractor amazon = new Amazon_Extractor();
+		Amazon_Extractor amazon = new Amazon_Extractor();
 		Extractor play = new Play_Extractor();
 
 		List<Pair<Integer, Double>> cex_books = cex.AllBookBarcodesAndPrices();
@@ -16,6 +18,15 @@ public class Demo {
 		List<Pair<Integer, Double>> play_books = play.AllBookBarcodesAndPrices();
 		List<Pair<Integer, Double>> play_dvds = play.AllDVDBarcodesAndPrices();
 
+		
+		List<String> dvd_ASINS = new ArrayList<String>();
+		
+		for(int i=0; i<20; i++){
+		 List<String> result = amazon.getASINS(i,"DVD");
+		 dvd_ASINS.addAll(result);
+		}
+		
+		/*
 		System.out.println("Profits of all the books (CEX): ");
 		for (Pair<Integer, Double> book : cex_books) {
 			Double amazon_difference = amazon.getPriceFromBarcode(book.getX())
@@ -30,7 +41,6 @@ public class Demo {
 				System.out.println("<" + play.getProductName(book.getX()) + ", "
 						+ play_difference + "> " + "Play");
 			}
+			*/
 		}
 	}
-
-}

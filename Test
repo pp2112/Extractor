@@ -1,0 +1,3 @@
+B000CR73X8;B000CR73X8;B00FZLFQ0I;B00FZLFQ0I;B000CR73VK;B000CR73VK
+
+<input style="width: 100%" type="button" name="convertButton" value="Convert to EAN and view on Amazon" onclick="refreshLinks($(&quot;#LocaleASIN2EAN&quot;).val(), &quot;change&quot;, $(&quot;#ItemIdASIN2EAN&quot;).val());convert(&quot;ASIN2EAN&quot;);" title="Convert ASIN to EAN and show tracked product page (of first product only if batch request)">
