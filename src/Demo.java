@@ -26,6 +26,13 @@ public class Demo {
 		 dvd_ASINS.addAll(result);
 		}
 		
+		StringBuffer final_result = new StringBuffer();
+		for(String s : dvd_ASINS){
+			final_result.append(s + ";");
+		}
+		
+		System.out.println(final_result);
+		
 		/*
 		System.out.println("Profits of all the books (CEX): ");
 		for (Pair<Integer, Double> book : cex_books) {

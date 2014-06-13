@@ -87,7 +87,7 @@ public class Amazon_Extractor implements Extractor {
 			}
 		}
 		List<String> results = final_matcher(sb.toString());		
-		System.out.println(results);
+		//System.out.println(results);
 		return results;
 	}	
 	
